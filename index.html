@@ -20,14 +20,14 @@
   .nav-book{background:var(--accent)!important;color:var(--black)!important;padding:0.55rem 1.4rem;border-radius:2px;font-weight:600!important;transition:transform 0.2s,box-shadow 0.3s!important;}
   .nav-book:hover{transform:translateY(-1px);box-shadow:0 0 24px rgba(255,60,0,0.5);}
   .hero{position:relative;height:100vh;min-height:700px;display:flex;flex-direction:column;justify-content:flex-end;padding:4rem 3rem;overflow:hidden;}
-  .hero-bg{position:absolute;inset:0;background:var(--black);}
-  .hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;}
-  .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(5,5,5,1) 0%,rgba(5,5,5,0.95) 20%,rgba(5,5,5,0.6) 45%,rgba(5,5,5,0.15) 70%,rgba(5,5,5,0.1) 100%);}
-  .hero-content{position:relative;z-index:2;max-width:900px;}
-  .hero-tag{font-size:0.75rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--white);margin-bottom:1rem;font-weight:500;opacity:0;animation:fadeUp 0.8s ease forwards 0.3s;}
-  .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,8vw,6rem);line-height:0.88;letter-spacing:-0.02em;color:var(--white);opacity:0;animation:fadeUp 0.8s ease forwards 0.5s;}
+  .hero-bg{position:absolute;inset:0;background:var(--black);width:100%;}
+  .hero-bg img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;}
+  .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(5,5,5,1) 0%,rgba(5,5,5,0.85) 25%,rgba(5,5,5,0.4) 50%,rgba(5,5,5,0.1) 100%);}
+  .hero-content{position:relative;z-index:2;max-width:900px;margin-bottom:2rem;}
+  .hero-tag{font-size:0.75rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--white);margin-bottom:0.75rem;font-weight:500;opacity:0;animation:fadeUp 0.8s ease forwards 0.3s;}
+  .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,10vw,7.5rem);line-height:0.85;letter-spacing:-0.02em;color:var(--white);opacity:0;animation:fadeUp 0.8s ease forwards 0.5s;}
   .hero h1 span{display:inline-block;color:var(--accent);}
-  .hero-sub{font-size:1.15rem;color:var(--dim);margin-top:1.5rem;font-weight:300;max-width:480px;line-height:1.6;opacity:0;animation:fadeUp 0.8s ease forwards 0.7s;}
+  .hero-sub{font-size:1.1rem;color:var(--dim);margin-top:1.25rem;font-weight:300;max-width:440px;line-height:1.5;opacity:0;animation:fadeUp 0.8s ease forwards 0.7s;}
   .hero-cta{display:inline-flex;align-items:center;gap:0.75rem;margin-top:2.5rem;padding:1rem 2.2rem;background:var(--accent);color:var(--black);text-decoration:none;font-weight:600;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;border-radius:2px;transition:all 0.3s;opacity:0;animation:fadeUp 0.8s ease forwards 0.9s;}
   .hero-cta:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(255,60,0,0.4);}
   .hero-cta svg{width:16px;height:16px;}
@@ -35,7 +35,8 @@
   .scroll-line{width:1px;height:50px;background:linear-gradient(to bottom,var(--dim),transparent);animation:scrollPulse 2s ease-in-out infinite;}
   @keyframes scrollPulse{0%,100%{opacity:0.3;}50%{opacity:1;}}
   @keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
-  section{padding:6rem 3rem;max-width:1200px;margin:0 auto;}
+  section{padding:6rem 3rem;position:relative;}
+  .container{max-width:1200px;margin:0 auto;}
   .section-label{font-size:0.7rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent);margin-bottom:0.75rem;font-weight:500;}
   .section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4rem);letter-spacing:0.02em;margin-bottom:3rem;line-height:1;}
   .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
@@ -79,7 +80,8 @@
   .booking p{color:var(--dim);font-weight:300;margin-top:1.5rem;font-size:1.1rem;position:relative;z-index:1;}
   .booking-btn{display:inline-flex;align-items:center;gap:0.75rem;margin-top:2.5rem;padding:1.15rem 3rem;background:var(--accent);color:var(--black);text-decoration:none;font-weight:600;font-size:0.9rem;letter-spacing:0.12em;text-transform:uppercase;border-radius:2px;position:relative;z-index:1;transition:all 0.3s;}
   .booking-btn:hover{transform:translateY(-2px);box-shadow:0 0 60px rgba(255,60,0,0.35);}
-  footer{border-top:1px solid var(--card-border);padding:2.5rem 3rem;display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;}
+  footer{border-top:1px solid var(--card-border);padding:2.5rem 0;}
+  .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
   .footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.15em;color:var(--dim);}
   .footer-socials{display:flex;gap:1.5rem;}
   .footer-socials a{color:var(--dim);text-decoration:none;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.3s;}
@@ -159,77 +161,85 @@
   <div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div>
 </section>
 <section id="about">
-  <div class="reveal">
-    <p class="section-label">About</p>
-    <h2 class="section-title">Two friends. One mission.<br>Pack every room.</h2>
-  </div>
-  <div class="about-grid">
-    <div class="about-text reveal">
-      <p>Emerging in 2025 from Tampa, FL, Room40 blends EDM and house with high-energy, hard-hitting influences into a genre-defying sound that's become a staple of the Tampa Bay nightlife scene.</p>
-      <p>What started as two friends experimenting behind the decks quickly turned into packed rooms, festival main stages, and residencies at some of the region's most recognized venues.</p>
-      <p>Their sound lives at the intersection of approachable, mainstream-friendly house and groove-driven energy — blending familiar tracks with fresh drops that keep crowds locked in from start to finish.</p>
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">About</p>
+      <h2 class="section-title">Two friends. One mission.<br>Pack every room.</h2>
     </div>
-    <div class="about-stats reveal">
-      <div class="stat-card"><div class="stat-number">10+</div><div class="stat-label">Venues &amp; Festivals</div></div>
-      <div class="stat-card"><div class="stat-number">2</div><div class="stat-label">Residencies</div></div>
-      <div class="stat-card"><div class="stat-number">3</div><div class="stat-label">Releases</div></div>
-      <div class="stat-card"><div class="stat-number">'25</div><div class="stat-label">Est. Tampa, FL</div></div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>Emerging in 2025 from Tampa, FL, Room40 blends EDM and house with high-energy, hard-hitting influences into a genre-defying sound that's become a staple of the Tampa Bay nightlife scene.</p>
+        <p>What started as two friends experimenting behind the decks quickly turned into packed rooms, festival main stages, and residencies at some of the region's most recognized venues.</p>
+        <p>Their sound lives at the intersection of approachable, mainstream-friendly house and groove-driven energy — blending familiar tracks with fresh drops that keep crowds locked in from start to finish.</p>
+      </div>
+      <div class="about-stats reveal">
+        <div class="stat-card"><div class="stat-number">10+</div><div class="stat-label">Venues &amp; Festivals</div></div>
+        <div class="stat-card"><div class="stat-number">2</div><div class="stat-label">Residencies</div></div>
+        <div class="stat-card"><div class="stat-number">3</div><div class="stat-label">Releases</div></div>
+        <div class="stat-card"><div class="stat-number">'25</div><div class="stat-label">Est. Tampa, FL</div></div>
+      </div>
     </div>
   </div>
 </section>
 <section id="shows">
-  <div class="reveal">
-    <p class="section-label">Experience</p>
-    <h2 class="section-title">Where we've been</h2>
-  </div>
-  <div class="exp-list reveal">
-    <div class="exp-item"><div><div class="exp-venue">Breakaway '26</div><div class="exp-detail">Tampa, FL</div></div><div class="exp-tag">Main Stage</div></div>
-    <div class="exp-item"><div><div class="exp-venue">Breakaway '25 "Haunted"</div><div class="exp-detail">Tampa, FL</div></div><div class="exp-tag">Main Stage</div></div>
-    <div class="exp-item"><div><div class="exp-venue">The Ritz Ybor</div><div class="exp-detail">Tampa, FL — Support for Hamdi</div></div><div class="exp-tag">Support</div></div>
-    <div class="exp-item"><div><div class="exp-venue">High Tide Music Festival '25</div><div class="exp-detail">Charleston, SC</div></div><div class="exp-tag">Silent Disco</div></div>
-    <div class="exp-item"><div><div class="exp-venue">Breakaway '25</div><div class="exp-detail">Tampa, FL</div></div><div class="exp-tag">Silent Disco</div></div>
-    <div class="exp-item"><div><div class="exp-venue">Tryst Lounge</div><div class="exp-detail">St. Pete, FL</div></div><div class="exp-tag">Residency</div></div>
-    <div class="exp-item"><div><div class="exp-venue">Halcyon / Split</div><div class="exp-detail">Raleigh, NC</div></div><div class="exp-tag">Residency</div></div>
-    <div class="exp-item"><div><div class="exp-venue">Flute &amp; Dram &middot; The Landing &middot; Bar HWRD</div><div class="exp-detail">St. Pete, FL</div></div><div class="exp-tag">Club Dates</div></div>
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">Experience</p>
+      <h2 class="section-title">Where we've been</h2>
+    </div>
+    <div class="exp-list reveal">
+      <div class="exp-item"><div><div class="exp-venue">Breakaway '26</div><div class="exp-detail">Tampa, FL</div></div><div class="exp-tag">Main Stage</div></div>
+      <div class="exp-item"><div><div class="exp-venue">Breakaway '25 "Haunted"</div><div class="exp-detail">Tampa, FL</div></div><div class="exp-tag">Main Stage</div></div>
+      <div class="exp-item"><div><div class="exp-venue">The Ritz Ybor</div><div class="exp-detail">Tampa, FL — Support for Hamdi</div></div><div class="exp-tag">Support</div></div>
+      <div class="exp-item"><div><div class="exp-venue">High Tide Music Festival '25</div><div class="exp-detail">Charleston, SC</div></div><div class="exp-tag">Silent Disco</div></div>
+      <div class="exp-item"><div><div class="exp-venue">Breakaway '25</div><div class="exp-detail">Tampa, FL</div></div><div class="exp-tag">Silent Disco</div></div>
+      <div class="exp-item"><div><div class="exp-venue">Tryst Lounge</div><div class="exp-detail">St. Pete, FL</div></div><div class="exp-tag">Residency</div></div>
+      <div class="exp-item"><div><div class="exp-venue">Halcyon / Split</div><div class="exp-detail">Raleigh, NC</div></div><div class="exp-tag">Residency</div></div>
+      <div class="exp-item"><div><div class="exp-venue">Flute &amp; Dram &middot; The Landing &middot; Bar HWRD</div><div class="exp-detail">St. Pete, FL</div></div><div class="exp-tag">Club Dates</div></div>
+    </div>
   </div>
 </section>
 <section id="music">
-  <div class="reveal">
-    <p class="section-label">Music</p>
-    <h2 class="section-title">Latest releases</h2>
-  </div>
-  <div class="music-grid reveal">
-    <div class="music-card">
-      <div class="music-year">2026</div>
-      <div class="music-title">White Flag<br>(Room40 Remix)</div>
-      <div class="music-type">Dido — Remix</div>
-      <div class="music-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>Listen</div>
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">Music</p>
+      <h2 class="section-title">Latest releases</h2>
     </div>
-    <div class="music-card">
-      <div class="music-year">2026</div>
-      <div class="music-title">i lied.</div>
-      <div class="music-type">Original</div>
-      <div class="music-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>Listen</div>
-    </div>
-    <div class="music-card">
-      <div class="music-year">2025</div>
-      <div class="music-title">You're On<br>(Room40 Remix)</div>
-      <div class="music-type">Madeon — Remix</div>
-      <div class="music-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>Listen</div>
+    <div class="music-grid reveal">
+      <div class="music-card">
+        <div class="music-year">2026</div>
+        <div class="music-title">White Flag<br>(Room40 Remix)</div>
+        <div class="music-type">Dido — Remix</div>
+        <div class="music-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>Listen</div>
+      </div>
+      <div class="music-card">
+        <div class="music-year">2026</div>
+        <div class="music-title">i lied.</div>
+        <div class="music-type">Original</div>
+        <div class="music-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>Listen</div>
+      </div>
+      <div class="music-card">
+        <div class="music-year">2025</div>
+        <div class="music-title">You're On<br>(Room40 Remix)</div>
+        <div class="music-type">Madeon — Remix</div>
+        <div class="music-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>Listen</div>
+      </div>
     </div>
   </div>
 </section>
 <section id="gallery">
-  <div class="reveal">
-    <p class="section-label">Gallery</p>
-    <h2 class="section-title">In the moment</h2>
-  </div>
-  <div class="gallery-grid reveal">
-    <div class="gallery-item"><img src="assets/room40_back_ritz_crop.jpg" alt="Room40 at The Ritz" loading="lazy"></div>
-    <div class="gallery-item"><img src="assets/room40_haunted_crop.jpg" alt="Room40 Breakaway Haunted" loading="lazy"></div>
-    <div class="gallery-item"><img src="assets/room40_front_ritz_crop.jpg" alt="Room40 front of crowd" loading="lazy"></div>
-    <div class="gallery-item"><img src="assets/RYR52069-Enhanced-NR.jpg" alt="Room40 live shot" loading="lazy"></div>
-    <div class="gallery-item"><img src="assets/IMG_1397.jpg" alt="Room40 performance" loading="lazy"></div>
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">Gallery</p>
+      <h2 class="section-title">In the moment</h2>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item"><img src="assets/room40_back_ritz_crop.jpg" alt="Room40 at The Ritz" loading="lazy"></div>
+      <div class="gallery-item"><img src="assets/room40_haunted_crop.jpg" alt="Room40 Breakaway Haunted" loading="lazy"></div>
+      <div class="gallery-item"><img src="assets/room40_front_ritz_crop.jpg" alt="Room40 front of crowd" loading="lazy"></div>
+      <div class="gallery-item"><img src="assets/RYR52069-Enhanced-NR.jpg" alt="Room40 live shot" loading="lazy"></div>
+      <div class="gallery-item"><img src="assets/IMG_1397.jpg" alt="Room40 performance" loading="lazy"></div>
+    </div>
   </div>
 </section>
 <section class="booking" id="book">
@@ -244,12 +254,16 @@
   </div>
 </section>
 <footer>
-  <div class="footer-logo">ROOM40</div>
-  <div class="footer-socials">
-    <a href="https://www.instagram.com/weareroom40/" target="_blank" rel="noopener">Instagram</a>
-    <a href="https://soundcloud.com/room-40" target="_blank" rel="noopener">SoundCloud</a>
-    <a href="https://open.spotify.com/artist/5Rzb0jGSWFSaRMCjgESjWk?si=0SZ2gALiShWaP7Zb0xtS4g" target="_blank" rel="noopener">Spotify</a>
-    <a href="https://www.tiktok.com/@weareroom40" target="_blank" rel="noopener">TikTok</a>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">ROOM40</div>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/weareroom40/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://soundcloud.com/room-40" target="_blank" rel="noopener">SoundCloud</a>
+        <a href="https://open.spotify.com/artist/5Rzb0jGSWFSaRMCjgESjWk?si=0SZ2gALiShWaP7Zb0xtS4g" target="_blank" rel="noopener">Spotify</a>
+        <a href="https://www.tiktok.com/@weareroom40" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
   </div>
 </footer>
 <script>
