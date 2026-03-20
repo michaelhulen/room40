@@ -19,19 +19,19 @@
   .nav-links a:hover{color:var(--white);}
   .nav-book{background:var(--accent)!important;color:var(--black)!important;padding:0.55rem 1.4rem;border-radius:2px;font-weight:600!important;transition:transform 0.2s,box-shadow 0.3s!important;}
   .nav-book:hover{transform:translateY(-1px);box-shadow:0 0 24px rgba(255,60,0,0.5);}
-  .hero{position:relative;height:100vh;min-height:700px;display:flex;flex-direction:column;justify-content:flex-end;padding:4rem 3rem;overflow:hidden;}
-  .hero-bg{position:fixed;inset:0;background:var(--black);}
-  .hero-bg img{position:fixed;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;z-index:-1;}
-  .hero-bg::after{content:'';position:fixed;inset:0;background:linear-gradient(to top,rgba(5,5,5,1) 0%,rgba(5,5,5,0.85) 25%,rgba(5,5,5,0.4) 50%,rgba(5,5,5,0.1) 100%);}
-  .hero-content{position:relative;z-index:2;max-width:900px;margin-bottom:2rem;}
+  .hero{position:relative;height:100vh;min-height:700px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;}
+  .hero-bg{position:absolute;inset:0;background:var(--black);}
+  .hero-bg img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center center;}
+  .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(5,5,5,1) 0%,rgba(5,5,5,0.85) 25%,rgba(5,5,5,0.4) 50%,rgba(5,5,5,0.1) 100%);}
+  .hero-content{position:relative;z-index:2;max-width:900px;margin-bottom:2rem;padding:4rem 3rem;}
   .hero-tag{font-size:0.75rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--white);margin-bottom:0.75rem;font-weight:500;opacity:0;animation:fadeUp 0.8s ease forwards 0.3s;}
-  .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,8vw,5rem);line-height:0.9;letter-spacing:-0.02em;color:var(--white);opacity:0;animation:fadeUp 0.8s ease forwards 0.5s;}
+  .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,10vw,6rem);line-height:0.9;letter-spacing:-0.02em;color:var(--white);opacity:0;animation:fadeUp 0.8s ease forwards 0.5s;}
   .hero h1 span{display:inline-block;color:var(--accent);}
-  .hero-sub{font-size:0.9rem;color:var(--dim);margin-top:1rem;font-weight:300;max-width:440px;line-height:1.4;opacity:0;animation:fadeUp 0.8s ease forwards 0.7s;}
-  .hero-cta{display:inline-flex;align-items:center;gap:0.5rem;margin-top:1.8rem;padding:0.8rem 1.8rem;background:var(--accent);color:var(--black);text-decoration:none;font-weight:600;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;border-radius:2px;transition:all 0.3s;opacity:0;animation:fadeUp 0.8s ease forwards 0.9s;}
+  .hero-sub{font-size:1.2rem;color:var(--dim);margin-top:1.2rem;font-weight:300;max-width:440px;line-height:1.5;opacity:0;animation:fadeUp 0.8s ease forwards 0.7s;}
+  .hero-cta{display:inline-flex;align-items:center;gap:0.6rem;margin-top:2rem;padding:1rem 2rem;background:var(--accent);color:var(--black);text-decoration:none;font-weight:600;font-size:0.95rem;letter-spacing:0.1em;text-transform:uppercase;border-radius:2px;transition:all 0.3s;opacity:0;animation:fadeUp 0.8s ease forwards 0.9s;}
   .hero-cta:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(255,60,0,0.4);}
   .hero-cta svg{width:16px;height:16px;}
-  .hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);width:100%;text-align:center;display:flex;flex-direction:column;align-items:center;gap:0.5rem;color:var(--dim);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;opacity:0;animation:fadeUp 0.8s ease forwards 1.2s;}
+  .hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.5rem;color:var(--dim);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;opacity:0;animation:fadeUp 0.8s ease forwards 1.2s;}
   .scroll-line{width:1px;height:50px;background:linear-gradient(to bottom,var(--dim),transparent);animation:scrollPulse 2s ease-in-out infinite;}
   @keyframes scrollPulse{0%,100%{opacity:0.3;}50%{opacity:1;}}
   @keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
